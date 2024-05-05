@@ -139,7 +139,7 @@ app.patch('/updateAllEmis/:id', (req, res) => {
     });
   });
 
-app.listen(4600, () => {
-    console.log('running at 4600')
-}
-);
+  const port = parseInt(process.env.PORT) || 8080;
+  app.listen(port, () => {
+    console.log(`listening on port ${port}`);
+  });

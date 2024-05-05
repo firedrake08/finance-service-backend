@@ -132,12 +132,12 @@ app.patch('/updateAllEmis/:id', (req, res) => {
     )
     .then((loan) => {
       res.json(loan);
-    })
+    })  
     .catch((err) => {
       console.error(err);
       res.status(500).send("Error updating installments");
     });
-  });
+  });  
 
   const port = parseInt(process.env.PORT) || 8080;
   app.listen(port, () => {
